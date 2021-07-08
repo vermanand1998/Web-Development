@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: darkkhaki;">
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Form Validation-1:</h1>
+        <hr>
+        <form onsubmit="return vallidate();" action="#">
+            <div class="form-group">
+                <label for="username" class="form-label">UserName</label>
+                <input type="text" id="user" class="form-control" placeholder="UserName" name="name">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="pass" class="form-control" placeholder="Password" name="password">
+            </div>
+            <div class="text-center">
+                 <button id="btn" type="submit" class="btn btn-primary" >Submit</button>
+                 <button type="reset" class="btn btn-primary" >Reset</button>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Form Validation-2:</h1>
+        <hr>
+        <form onsubmit="return vallidate2();" action="#">
+            <div class="form-group">
+                <label for="username" class="form-label">UserName</label>
+                <input type="text" id="user-1" class="form-control" placeholder="UserName" name="name">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="pass-1" class="form-control" placeholder="Password" name="password">
+            </div>
+            <div class="text-center">
+                 <button id="btn" type="submit" class="btn btn-primary" >Submit</button>
+                 <button type="reset" class="btn btn-primary" >Reset</button>
+            </div>
+        </form>
+    </div>
+        
+</body>
+<script>
+    function vallidate(){
+    var username=document.getElementById("user");
+    var password=document.getElementById("pass");
+    if(username.value==""||password.value==""){
+        alert("Either username or password is Empty");
+        return false;
+    }
+    else {
+    alert("Thanks you for subbmission");
+    return true;
+    }
+    }
+    function vallidate2(){
+    var u=document.getElementById("user-1");
+    var p=document.getElementById("pass-1");
+    if(u.value=="" && p.value==""){
+        // alert("Either username or password is Empty");
+        u.style.border="3px solid red";
+        p.style.border="3px solid red";
+        return false;
+    }
+    if(p.value==""){
+        p.style.border="3px solid red";
+        return false;
+    }
+    if(u.value==""){
+        u.style.border="3px solid red";
+        return false;
+    }
+    else {
+    alert("Thanks you for subbmission");
+    return true;
+    }
+    }
+</script>
+</html>
