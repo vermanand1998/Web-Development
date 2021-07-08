@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="margin: 15px; margin-right: 40px;background-color: grey;margin:5% 20% 70%;">
+    <div class="container" style="background-color:peachpuff">
+    <h2>JS Modules</h2>
+    <hr>
+    <p>Examples</p>
+    <div class="card">
+        <div class="card-body">
+              <h4 class="card-title">Timer Example</h4>
+              <p class="card-text">Lets try some exampled.You can read more Paragraph Writing about articles, events, people, sports, technology many more. Time management means rightly managing the time available to one. Time is significant, and it must not be wasted.</p>
+              <button class="btn btn-primary" onclick="myVariable=setTimeout(alertFunc,3000);">Click me to get Hello after 3s</button>
+              <button class="btn btn-danger" onclick="stopHello()">Stop</button>
+              <br><br>
+        </div>
+      </div>
+    </div>
+    <br><br>
+<!-- ================================================================================================================ -->
+    <div class="container" style="background-color:peachpuff" id="myBox">
+        <h2>JS Modules</h2>
+        <hr>
+        <p>Examples</p>
+        <div class="card">
+            <div class="card-body">
+                  <h4 class="card-title">Timer Interval Example</h4>
+                  <p class="card-text">Lets try some exampled.You can read more Paragraph Writing about articles, events, people, sports, technology many more. Time management means rightly managing the time available to one. Time is significant, and it must not be wasted.</p>
+                  <p id="demo" style="font-size: 40px;"></p>
+                  <button class="btn btn-primary" onclick="startInterval()">Try It</button>
+                  <button class="btn btn-danger" onclick="clearInterval(clockTimer)">Stop It</button>
+                  <br><br>
+            </div>
+          </div>
+        </div>
+    
+</body>
+<script>
+    function alertFunc()
+    {
+        setTimeout(function(){alert("hello ,Time-Up??");},3000);
+    }
+    function stopHello()
+    {
+        clearTimeout(myVariable);
+    }
+//========================================================================
+    let clockTimer;
+    function startInterval()
+    {
+        clockTimer=setInterval(myTimer,1000);
+    }
+    function myTimer()
+    {
+        const d=new Date();
+        document.getElementById('demo').innerHTML=d.toLocaleTimeString();
+        var box=document.getElementById('myBox');
+        if(box.style.backgroundColor==='yellow')
+        {
+            box.style.backgroundColor="blue";
+        }
+        else
+        {
+            box.style.backgroundColor="yellow";
+        }
+    }
+</script>
+</html>
