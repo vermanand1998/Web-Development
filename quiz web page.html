@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: darkkhaki;">
+    <div style="margin-left: 25%;margin-right: 25%;background-color: cornflowerblue;padding: 20px;">
+    <h1>Quiz Web Page</h1>
+    <hr>
+    <div>
+        <p style="font-size: 25px;">Quetion-1: What is the Capital of INDIA?</p>
+        <ol>
+            <li>New Delhi</li>
+            <li>Bearn</li>
+            <li>Berlin</li>
+            <li>Madrid</li>
+        </ol>
+    </div>
+    
+    <input type="Number" id="option">
+    <button id="mybtn" onclick="check()">Submit Answer</button> 
+
+    <div style="background-color: bisque; margin-right: 50%;" id="answer">
+        <p style="font-size: 20px;" id="output"></p>
+    </div>
+    <hr>
+    </div>
+</body>
+<script>
+    function check()
+    {
+      let option=document.getElementById("option").value;
+      if(option==1)
+      {
+          document.getElementById("output").style.backgroundColor="lightgreen";
+          document.getElementById("output").innerHTML="Correct Answer.";
+      } 
+      else
+      {
+        document.getElementById("output").style.backgroundColor="red";
+        document.getElementById("output").innerHTML="Wrong Answer, Try Again.";
+      } 
+    }
+</script>
+</html>
