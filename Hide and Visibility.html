@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: darkkhaki;">
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Hide / Unhide:</h1>
+        <hr>
+        <!-- <p style="font-size: 20px;color: green;" id="counter">0</p> -->
+        <div id="counter">
+            <p style="font-size: 25px;">Quetion-1: What is the Capital of INDIA?</p>
+            <ol>
+                <li>New Delhi</li>
+                <li>Bearn</li>
+                <li>Berlin</li>
+                <li>Madrid</li>
+            </ol>
+        </div>
+        <button type="button" id="two" onclick="hideme()" class="btn btn-primary" style="font-size: 30px;">Click Me</button>
+
+    </div>
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Visible / Not-visible:</h1>
+        <hr>
+        <!-- <p style="font-size: 20px;color: green;" id="counter">0</p> -->
+        <div id="counter2">
+            <p style="font-size: 25px;">Quetion-1: What is the Capital of INDIA?</p>
+            <ol>
+                <li>New Delhi</li>
+                <li>Bearn</li>
+                <li>Berlin</li>
+                <li>Madrid</li>
+            </ol>
+        </div>
+        <button type="button" id="two" onclick="visi()" class="btn btn-primary" style="font-size: 30px;">Click Me</button>
+
+    </div>
+    
+</body>
+<script>
+    function hideme()
+    {
+         var hide= document.getElementById("counter");
+        //  document.getElementById('counter').style.display='none';
+        if(hide.style.display==='none')
+        {
+            hide.style.display='block';
+        }
+        else
+        {
+            hide.style.display='none' 
+        }
+        
+    }
+    function visi()
+    {
+         var vi= document.getElementById("counter2");
+        //  document.getElementById('counter').style.display='none';
+        if(vi.style.visibility==='hidden')
+        {
+            vi.style.visibility='visible';
+        }
+        else
+        {
+            vi.style.visibility='hidden' 
+        }
+        
+    }
+</script>
+</html>
