@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript Examples:</h1>
+        <p id="mypara" style="font-size: 30px;"></p>
+    </div>
+    
+</body>
+<script>
+    let arr=['anand','abhishek','suraj','shivam'];
+    // document.getElementById("mypara").innerHTML=arr.join(" $ ");
+    // console.log(arr);
+
+    // let latest=arr.pop();
+    // document.getElementById("mypara").innerHTML=latest;
+    // console.log(arr);
+
+    // let a=Math.random();
+    // document.getElementById("mypara").innerHTML=a;
+    // console.log(a);
+
+    // let a=Math.floor(Math.random()*(40));//generating number from zero to n
+    // document.getElementById("mypara").innerHTML=a;
+    // console.log(a);
+
+    // let a=Math.floor(Math.random()*(100))-50;//generating number from -50 to 50
+    // document.getElementById("mypara").innerHTML=a;
+    // console.log(a);
+    
+    // const a=new Array(5,4,6,7,8,9);
+    // document.getElementById("mypara").innerHTML=a.sort();
+
+    let a=[1,2,3,40,5,6,7,8,9];
+    let ans="";
+    // for(let i=0;i<a.length;i++)
+    // {
+    //     ans=ans+a[i]*10+" ";
+    // }
+    // document.getElementById("mypara").innerHTML=ans;
+
+    for(let i=0;i<a.length;i++)
+    {
+        ans=ans+a[i]*10+"<br>";//<br> used for new line
+    }
+    document.getElementById("mypara").innerHTML=ans;
+
+
+</script>
+</html>
