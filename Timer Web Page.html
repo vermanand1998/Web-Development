@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: darkkhaki;">
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Please Check Time:</h1>
+        <hr>
+        <button type="button" id="two" onclick="mytime()" class="btn btn-primary" style="font-size: 30px;">Click Me</button>
+        <br><br>
+        <div style="background-color: rosybrown;">
+            <p style="font-size: 20px;color: black;" id="counter2"></p>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function mytime()
+    {
+          time=new Date();
+          document.getElementById("counter2").innerHTML=time;
+        
+    }
+</script>
+</html>
