@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: darkkhaki;">
+    <div style="margin-left:25%;margin-right:30%;margin-top:5%; background-color:gray;padding: 20px;">
+        <h1 style="font-family: bold;">Please Like:</h1>
+        <hr>
+        <button type="button" id="one" onclick="increment()" class="btn btn-primary" style="font-size: 30px;">Like</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id="two" onclick="decrement()" class="btn btn-primary" style="font-size: 30px;">Dislike</button>
+        <h2 style="font-size: 50px;" id="counter">0</h2>
+    </div>
+    
+</body>
+<script>
+    let count=0;
+    function increment()
+    {
+      count=count+1;
+      document.getElementById("counter").innerHTML=count;
+    }
+    function decrement()
+    {
+        if(count>0)
+        {
+          count=count-1;
+          document.getElementById("counter").innerHTML=count;
+        }
+    }
+</script>
+</html>
